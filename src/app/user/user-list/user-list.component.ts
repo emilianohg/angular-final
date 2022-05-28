@@ -16,12 +16,16 @@ export class UserListComponent implements OnInit {
     private userService: UserService,
   ) {
     this.listUserPagination = null;
-    this.userService.getUsers().subscribe(res => {
-      this.listUserPagination = res;
-    })
+    this.getPage(1);
   }
 
   ngOnInit(): void {
+  }
+
+  getPage(page: number) {
+    this.userService.getUsers(page).subscribe(res => {
+      this.listUserPagination = res;
+    });
   }
 
 }

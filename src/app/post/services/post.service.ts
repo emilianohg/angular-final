@@ -15,8 +15,8 @@ export class PostService {
     private http: HttpClient,
   ) { }
 
-  getPosts() : Observable<Pagination<Post>> {
-    return this.http.get<Pagination<Post>>('/posts');
+  getPosts(page: number = 1) : Observable<Pagination<Post>> {
+    return this.http.get<Pagination<Post>>('/posts', {params: {page}});
   }
 
   getPost(id: number): Observable<Post> {

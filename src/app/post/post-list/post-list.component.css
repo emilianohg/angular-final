@@ -1,8 +1,35 @@
+.post-card {
+  margin-bottom: 10px;
+  border: solid 1px #ddd;
+  padding: 10px;
+}
+.post-card h1 {
+  font-size: 1.1rem;
+}
+.post-card h2 {
+  font-size: 0.9rem;
+  color: #909090;
+  font-weight: normal;
+}
+.readmore-container {
+  text-align: right;
+}
+
+.title-container::after {
+  content: '';
+  width: 40px;
+  display: block;
+  height: 5px;
+  background: var(--secondary-color);
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
 .float-button {
   display: flex;
   width: 64px;
   height: 64px;
-  position: absolute;
+  position: fixed;
   bottom: 20px;
   right: 20px;
   background-color: var(--primary-color);

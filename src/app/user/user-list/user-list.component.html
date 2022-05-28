@@ -1,9 +1,23 @@
 <div class="container">
-  <h1>Usuarios</h1>
+  <div class="section-title">
+    <h1>Usuarios</h1>
+  </div>
   <section class="list-user" *ngIf="listUserPagination">
-    <div class="user-card" *ngFor="let user of listUserPagination.data">
+    <div class="user-card"
+         *ngFor="let user of listUserPagination.data
+         | paginate: {
+            id: 'server',
+            itemsPerPage: listUserPagination.per_page,
+            currentPage: listUserPagination.current_page,
+            totalItems: listUserPagination.total
+           }"
+    >
       <h1>{{ user.name }}</h1>
       <h2>{{ user.email }}</h2>
     </div>
   </section>
+</div>
+
+<div class="text-center">
+  <pagination-controls (pageChange)="getPage($event)" id="server"></pagination-controls>
 </div>

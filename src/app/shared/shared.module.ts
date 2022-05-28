@@ -7,6 +7,7 @@ import { AuthService } from '../auth/services/auth.service';
 import { UrlInterceptorService } from './services/url-interceptor.service';
 import { HeaderComponent } from './components/header/header.component';
 import { RouterModule } from '@angular/router';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -17,11 +18,14 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     HttpClientModule,
     RouterModule,
+    NgxPaginationModule,
   ],
   exports: [
     RouterModule,
     FeedbackValidatorComponent,
     HeaderComponent,
+    HeaderComponent,
+    NgxPaginationModule,
   ],
   providers: [
     AuthService,

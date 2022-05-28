@@ -13,11 +13,21 @@ img {
   object-fit: cover;
 }
 
+.title-container::after {
+  content: '';
+  width: 40px;
+  display: block;
+  height: 5px;
+  background: var(--secondary-color);
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
 .float-button {
   display: flex;
   width: 64px;
   height: 64px;
-  position: absolute;
+  position: fixed;
   bottom: 20px;
   right: 20px;
   background-color: var(--primary-color);

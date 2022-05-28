@@ -2,9 +2,14 @@
   <div class="image-container">
     <img [src]="post.category.image_url" [alt]="post.title">
   </div>
-  <h1>{{ post.title }}</h1>
-  <h2>{{ post.user.name }}</h2>
-  <p>{{ post.description }}</p>
+  <div class="container">
+    <div class="title-container">
+      <h1>{{ post.title }}</h1>
+      <h2>{{ post.user.name }}</h2>
+    </div>
+    <p>{{ post.description }}</p>
+  </div>
+
 </div>
 
 

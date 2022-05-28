@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { PostService } from '../services/post.service';
 import { Pagination } from '../../shared/dtos/pagination';
 import { Post } from '../dtos/Post';
@@ -8,7 +8,7 @@ import { Post } from '../dtos/Post';
   templateUrl: './post-list.component.html',
   styleUrls: ['./post-list.component.css']
 })
-export class PostListComponent implements OnInit {
+export class PostListComponent {
 
   listPostPagination : Pagination<Post> | null;
 
@@ -16,18 +16,13 @@ export class PostListComponent implements OnInit {
     private postService: PostService,
   ) {
     this.listPostPagination = null;
+    this.getPage(1);
+  }
 
-    this.postService.getPosts().subscribe(res => {
+  getPage(page: number) {
+    this.postService.getPosts(page).subscribe(res => {
       this.listPostPagination = res;
     });
-
-  }
-
-  ngOnInit(): void {
-  }
-
-  create(): void {
-
   }
 
 }
