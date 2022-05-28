@@ -1,1 +1,75 @@
-/* You can add global styles to this file, and also import other style files */
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+
+:root {
+  --primary-color: #082154;
+  --secondary-color: #C49E0D;
+  --white-color: #eeeeee;
+  --black-color: #222222;
+  --background-color: #f2f2f2;
+  --danger-color: #ff4444;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: "Nunito", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 0.9rem;
+  background-color: var(--background-color);
+}
+
+fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+input, textarea, select {
+  font: 400 12px/16px "Open Sans", Helvetica, Arial, sans-serif;
+  width: 100%;
+  border: 1px solid #CCC;
+  background: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+input:hover, textarea:hover, select:hover {
+  border:1px solid #AAA;
+  transition:border-color 0.3s ease-in-out;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline:0;
+  border:1px solid #999;
+}
+
+.container {
+  margin: 0 10px;
+}
+
+.form-group {
+  margin: 6px 0;
+}
+
+.hide {
+  display: none;
+}
+
+.btn {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: var(--primary-color);
+  color: #fff;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 1rem;
+}

@@ -1,0 +1,31 @@
+img {
+  width: 100%;
+}
+
+.image-container {
+  max-height: 40vh;
+  height: 40vh;
+  overflow: hidden;
+}
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.float-button {
+  display: flex;
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--primary-color);
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+}
+
+.float-button svg {
+  fill: white;
+}

@@ -1,0 +1,29 @@
+<div class="login">
+  <div class="container-image">
+    <img src="assets/logo.png" alt="logo">
+  </div>
+  <form [formGroup]="form" autocomplete="off">
+    <div class="form-group">
+      <label for="email">Correo electrónico:</label>
+      <input id="email" formControlName="email" type="email" autofocus tabindex="1">
+      <app-feedback-validator
+        [submitted]="submitted"
+        [errors]="form.controls.email.errors"
+        attr="correo electrónico"
+      ></app-feedback-validator>
+    </div>
+    <div class="form-group">
+      <label for="password">Contraseña:</label>
+      <input id="password" formControlName="password" type="password" tabindex="2">
+      <app-feedback-validator
+        [submitted]="submitted"
+        [errors]="form.controls.password.errors"
+        attr="contraseña"
+      ></app-feedback-validator>
+    </div>
+    <div class="error-message" *ngIf="messageError">
+      {{ messageError }}
+    </div>
+    <button class="btn btn-primary" (click)="login()">Iniciar sesión</button>
+  </form>
+</div>

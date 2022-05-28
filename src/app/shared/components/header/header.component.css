@@ -1,0 +1,42 @@
+header {
+  background: var(--primary-color);
+  color: var(--white-color);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.nav-main {
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav-logo {
+  font-size: 1.3rem;
+  padding: 0 10px;
+  font-weight: bold;
+}
+
+.nav-links {
+  padding: 0 10px;
+  display: flex;
+  gap: 6px;
+}
+
+
+
+.active {
+  text-decoration: underline var(--secondary-color) 3px;
+}
+
+

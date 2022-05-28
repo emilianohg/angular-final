@@ -1,0 +1,15 @@
+<header>
+  <nav class="nav">
+    <div class="nav-logo">
+      <a routerLink="/">UAS</a>
+    </div>
+    <div *ngIf="!isInLogin" class="nav-links">
+      <a *ngIf="isUserLoggedIn" class="nav-link" (click)="logout()">Cerrar sesión</a>
+      <a *ngIf="!isUserLoggedIn" routerLink="/auth" class="nav-link">Iniciar sesión</a>
+    </div>
+  </nav>
+</header>
+<nav class="nav nav-main">
+  <a routerLink="/posts" class="nav-link" routerLinkActive="active">Publicaciones</a>
+  <a routerLink="/users" class="nav-link" routerLinkActive="active">Usuarios</a>
+</nav>

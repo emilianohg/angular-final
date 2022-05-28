@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Publicaciones</h1>
+  <section class="list-post" *ngIf="listPostPagination">
+    <article class="post-card" *ngFor="let post of listPostPagination.data">
+      <div class="content-container">
+        <h1>{{ post.title }}</h1>
+        <h2>{{ post.user.name }}</h2>
+        <p>{{ post.description }}</p>
+      </div>
+      <div class="readmore-container">
+        <a [routerLink]="[post.id]">Leer más</a>
+      </div>
+    </article>
+  </section>
+</div>
+
+<a routerLink="/posts/create" class="float-button" (click)="create()">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z"/></svg>
+</a>

@@ -1,0 +1,4 @@
+.invalid-feedback {
+  color: var(--danger-color);
+  font-size: 0.9rem;
+}

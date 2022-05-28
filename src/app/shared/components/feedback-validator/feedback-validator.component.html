@@ -1,0 +1,11 @@
+<div *ngIf="submitted && errors" class="invalid-feedback">
+  <div *ngIf="errors.required">El campo {{attr}} es requerido.</div>
+  <div *ngIf="errors.minlength">El {{attr}} debe ser más grande que {{errors.minlength.requiredLength}} caracteres.</div>
+  <div *ngIf="errors.nowhitespace">El campo {{attr}} tiene caracteres de espacio en blanco no válido.</div>
+  <div *ngIf="errors.size">El campo {{attr}} debe tener {{errors.size.requiredSize}} caracteres.</div>
+  <div *ngIf="errors.numeric">El campo {{attr}} debe ser numérico.</div>
+  <div *ngIf="errors.email">El campo {{attr}} debe ser un correo electrónico válido.</div>
+  <div *ngIf="errors.decimal">El campo seleccionado {{attr}} es inválido.</div>
+  <div *ngIf="errors.max">El número máximo de caracteres para el campo {{attr}} es {{errors.max.length}}.</div>
+  <div *ngIf="errors.min">El número mínimo de caracteres para el campo {{attr}} es {{errors.min.length}}.</div>
+</div>

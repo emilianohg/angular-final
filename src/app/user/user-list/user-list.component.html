@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Usuarios</h1>
+  <section class="list-user" *ngIf="listUserPagination">
+    <div class="user-card" *ngFor="let user of listUserPagination.data">
+      <h1>{{ user.name }}</h1>
+      <h2>{{ user.email }}</h2>
+    </div>
+  </section>
+</div>
